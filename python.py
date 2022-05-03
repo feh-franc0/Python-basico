@@ -1,14 +1,68 @@
-# PRINT, INPUT E VARIAVEIS
-print("Boas Vindas ao Python The Game!")
+# FUNÇÕES, para usar funções use a palavra 'def'
+def mensagens_iniciais():
+    print("Boas Vindas ao Python The Game!")
+    print("REGRAS")
+    print("Ao longo do jogo serão exibidas perguntas que você deve responder pelo teclado")
+
+def calcular_idade(ano_nascimento, ano_atual):
+    idade = ano_atual - ano_nascimento
+    return idade
+
+mensagens_iniciais()
 print("Gostaria muito de Saber seu nome!")
-nome_jogador = input("Digite o seu nome: ")
-print("Olá, {}! É um prazer ter você jogando o nosso jogo".format(nome_jogador))
+# DICIONÁRIO , PERMITE O AGRUPAMENTO DE DADOS DENTRO DE UMA ÚNICA ESTRUTURA
+# EXEMPLOS DE USO DO DICIONÁRIO
+# personagens = {
+#         "Yoda":"Mestre Jedi",
+#         "Mace Windu":"Mestre Jedi",
+#         "Anakin Skywalker":"Cavaleiro Jedi",
+#         "R2-D2":"Dróide",
+#         "Dex":"Balconista"
+# }
+#
+# print(personagens.keys())
+# for chave in personagens.keys():
+#         print(chave)
+#
+# print("\n")
+#
+# print(personagens.values())
+# for valores in personagens.values():
+#         print(valores)
+#
+# print("\n")
+#
+# for chave, valor in personagens.items():
+#         print("O personagem {} pertence à classe {}".format(chave,valor))
+#
+# print("\n")
+#
+# ira tirar o ultimo item
+# personagens.popitem()
+# for chave, valor in personagens.items():
+#         print("O personagem {} pertence à classe {}".format(chave,valor))
+#
+#
+# print("\n")
+#
+#
+# ira tirar o item que tem a chave igual ao que passarmos
+# personagens.pop("Anakin Skywalker")
+# for chave, valor in personagens.items():
+#         print("O personagem {} pertence à classe {}".format(chave,valor))
+#
+#
+#
+dados_jogador = {}
+dados_jogador["nome"] = input("Digite o seu nome: ")
+print("Olá, {}! É um prazer ter você jogando o nosso jogo".format(dados_jogador["nome"]))
 
 idade_jogador = int(input("Eu gostario de saber a sua idade. Em que ano você nasceu?"))
 
-idade_calculada = 2021 - idade_jogador
 
-print("Pelo que pude calcular, a sua idade é {}".format(idade_calculada))
+dados_jogador["idade"] = calcular_idade(idade_jogador, 2021)
+
+print("Pelo que pude calcular, a sua idade é {}".format(dados_jogador["idade"]))
 
 
 # IF = SE , Comando de Tomada de Decisão
